@@ -31,8 +31,7 @@ p {
 
 header,
 footer {
-    background-color: #777999;
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 .hero {
@@ -49,8 +48,70 @@ footer {
 
 }
 
-
-
 main {
     margin-bottom: 2em;
+}
+
+/* NEW CSS */ 
+
+* {
+    font-family: Marker Felt, fantasy
+}
+
+.margins {
+    display:grid;
+    width:100%;
+    grid-template-columns: 10% 80% 10%
+}
+
+.house {
+  grid-column: 2 / 3;
+  display: flex;
+  width:100%;
+  margin:auto;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top:5%; /* Reactive padding size for different screen sizing */
+  padding-bottom:5%;
+  align-items: center;
+  margin: 2% 0 0 0;
+}
+
+.roomTower {
+  margin-top: 2%;
+  width: 100%;
+  height: auto;
+}
+
+.roomHouse {
+    display:none;
+}
+
+.roomText {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+
+.roomContainer {
+  position: relative;
+  text-align: center;
+  width:100%;
+}
+
+
+@media only screen and (min-width: 500px) { 
+  .roomTower {
+      display: none;
+  }
+  .roomHouse {
+      display: inline;
+      margin-top: 2%;
+      width: 100%;
+  }
+  .house {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:2%;
+  }
 }
