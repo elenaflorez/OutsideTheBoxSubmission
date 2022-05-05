@@ -36,7 +36,6 @@ footer {
 
 .hero {
     text-align: center;
-    background: #a5a5a5;
     min-height: 5em;
     padding: 2em;
     margin: 1em 0;
@@ -56,6 +55,29 @@ main {
 
 * {
     font-family: Marker Felt, fantasy
+}
+
+.narrationText {
+    text-align:center;
+    padding-bottom:2em;
+}
+
+.narrationHouse {
+    display:none;
+}
+
+.structure {
+    display:grid;
+    width:100%;
+}
+
+.roofTower {
+    width:100%;
+}
+
+.roofHouse {
+    width:100%;
+    display:none;
 }
 
 .margins {
@@ -81,10 +103,12 @@ main {
   margin-top: 2%;
   width: 100%;
   height: auto;
+  border: 2px solid black;
 }
 
 .roomHouse {
     display:none;
+    border: 2px solid black;
 }
 
 .roomText {
@@ -101,7 +125,26 @@ main {
 
 
 @media only screen and (min-width: 500px) { 
-  .roomTower {
+    body {
+        font-size:25px;
+    }
+    .roofTower {
+        display:none;
+    }
+
+    .narrationHouse {
+        display:inline;
+    }
+
+    .narrationTower {
+        display:none;
+    }
+    
+    .roofHouse {
+        display:inline;
+    }
+  
+    .roomTower {
       display: none;
   }
   .roomHouse {
